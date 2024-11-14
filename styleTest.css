@@ -1,0 +1,68 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.section{
+    height
+}
+
+header {
+    position: relative;
+}
+
+nav {
+    display: block;
+}
+
+
+#hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    nav {
+        display: none; /* Hide nav */
+    }
+
+    #hamburger {
+        padding: 20px;
+        display: block; /* Show hamburger */
+    }
+
+    .nav-open {
+        display: block; /* Show nav when toggled */
+    }
+
+    #main-nav ul {
+        display: flex;
+        flex-direction: column; /* Vertical orientation */
+        position: absolute;
+        top: 50px; /* Adjust as needed */
+        background: transparent; /* Remove background color */
+        width: 200px; /* Full width */
+        padding: 0;
+        margin-top: 15px;
+        align-items: end;
+        right:0;
+    }
+
+    #main-nav li {
+        list-style: none;
+    }
+
+    #main-nav a {
+        color: white; /* Set text color to green */
+        text-decoration: none; /* Remove underline */
+        padding: 10px; /* Add some padding */
+        display: block; /* Make links block elements */
+    }
+
+    #main-nav a:hover {
+        background: rgb(75, 116, 75); /* Optional: add a hover effect */
+    }
+}
+

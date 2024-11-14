@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="B icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="try.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <a href="index.html" class="logo">
+                <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+            </a>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html" class="button">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div id="hamburger" class="hamburger" onclick="toggleNav()">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <script>
+                function toggleNav() {
+                    const nav = document.getElementById('main-nav');
+                    nav.classList.toggle('nav-open');
+                }
+                // Close the nav if clicking outside of it
+                document.addEventListener('click', function(event) {
+                    const nav = document.getElementById('main-nav');
+                    const hamburger = document.getElementById('hamburger');
+
+                    // Check if the click was outside the nav and hamburger
+                    if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+                        nav.classList.remove('nav-open'); // Hide the nav
+                    }
+                });
+            </script>
+        </header>
+        <div class="company">
+            <h1>TriMas Corporation</h1>
+            <div class="pdf-box">
+                <a href="TriMas Corporation - Press Release - December 12, 2023.pdf" target="_blank" rel="noopener noreferrer">TriMas Corporation - Press Release - December 12, 2024 (pdf)</a>
+            </div>
+            <div class="pdf-box">
+                <a href="TriMas Corporation - Letter to CEO - December 12, 2023.pdf" target="_blank" rel="noopener noreferrer">TriMas Corporation - Letter to Chairman of the Board of Directors - December 12, 2024 (pdf)</a>
+            </div>     
+        </div>
+    </div>
+    
+</body>
+</html>

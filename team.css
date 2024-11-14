@@ -1,0 +1,94 @@
+.profile-list {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 5vw; /* Space between grid items */
+    padding: 0; /* Remove default padding */
+    margin: 2vw; /* Remove default margin */
+}
+
+.content-pages{
+    background-color: #003300;
+    padding: 20px;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color:white;
+    text-align: center;
+}
+
+h1{
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+}
+
+p{
+    margin-bottom: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.profile-container {
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    border: 1px solid #ccc; /* Border around the profile */
+    padding: 10px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #003300; /* Background color */
+    transition: transform 0.5s; 
+    width: 40vw;
+}
+
+.profile-container:hover {
+    transform:scale(1.05);
+}
+
+.profile-image {
+    width: 100%; /* Set a fixed width for the image */
+    height: 50px; /* Set a fixed height for the image */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-bottom: 10px; /* Space between image and name */
+}
+
+.profile-name {
+    text-decoration: none; /* Remove underline from link */
+    color: #fff; /* Text color */
+    font-weight: bold; /* Bold text */
+}
+
+.profile-page-container {
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: row; /* Stack items vertically */
+    align-items: start; /* Center items horizontally */
+    /*border: 1px solid #ccc; /* Border around the profile */
+    /*padding: 10px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #003300; /* Background color */
+    gap: 20px;
+}
+
+.profile-page-image {
+    width: 40%; /* Set a fixed width for the image */
+    height: auto; /* Set a fixed height for the image */
+    border-radius: 7%; /* Circular image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-bottom: 10px; /* Space between image and name */
+}
+
+.bio{
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.bio p{
+    margin:20px;
+    margin-top: 0;
+    text-align: justify;
+}
+
+footer p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 0;
+    color: white;
+}

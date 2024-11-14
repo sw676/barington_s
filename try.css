@@ -1,0 +1,435 @@
+
+
+
+/* styles.css */
+
+
+.content {
+    position: relative;
+    z-index: 3; /* Content appears above the video */
+    color: white; /* Text color for contrast */
+    text-align: center; /* Center the text */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly */
+    height: 15vh; /* Full height to space items */
+    background-color: #003300;
+}
+
+
+.content {
+    position: relative;
+    z-index: 3; /* Content appears above the video */
+    color: #003300; /* Text color for contrast */
+    text-align: center; /* Center the text */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly */
+    height: 15vh; /* Full height to space items */
+    background-color: #003300;
+}
+
+.content {
+    position: relative;
+    z-index: 3; /* Content appears above the video */
+    color: white; /* Text color for contrast */
+    text-align: center; /* Center the text */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between; /* Distribute space evenly */
+    height: 100vh; /* Full height to space items */
+}
+
+
+body{
+    background-color: #003300;
+}
+
+a:hover {
+    color: #e20000;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.overlay-image {
+    position: absolute; /* Position over the background */
+    top: 5%; /* Adjust as needed */
+    left: 2%; /* Center horizontally */
+    transform: translate(0%, 0%); /* Center adjustment */
+    width: 300px; /* Adjust width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 4; /* Ensure it's above the background */
+    cursor: pointer; /* Changes cursor to indicate it's clickable */
+    margin-top: 20px; 
+}
+
+.logo {
+    width: 100%; /* Make it responsive */
+    max-width: 200px; /* Set a max width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10vw; /* Space between logo and nav items */
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav items */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Adjust padding as needed */
+    position: relative;
+    
+    /*
+    flex: 1; /* Allows header to take available space */
+    /*
+    position: absolute; /* Position header absolutely */
+    /*
+    right: 20px; /* Adjust as needed for distance from the right edge */
+    /*
+    top: 5%; /* Adjust as needed for distance from the top */
+
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;            /* <weight>: Use a value from 400 to 900 */
+  font-style: normal;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly; /* Center the links */
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-family:'Playfair Display', serif;
+    
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 1;
+}
+
+nav ul li a:hover {
+    color: #dbdbdb;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 1;
+}
+
+a:hover {
+    color: #888888;
+}
+
+.button {
+    display: inline-block; /* Make it behave like a button */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 27px; /* Font size */
+    color: white; /* Text color */
+    background-color: #005700; /* Button background color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    line-height: .7;
+    transition: background-color 0.3s; /* Smooth background color change */
+}
+
+.button:hover {
+    background-color: #004400; /* Darker shade on hover */
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: left;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+
+.content-news h1 {
+    font-size: 45px; /* Adjust heading size */
+    margin-bottom: 25px; /* Space below the heading */
+    display: center;
+    font-family: "Playfair Display", serif;
+}
+.carousel h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 45px; /* Adjust heading size */
+    margin-bottom: 25px; /* Space below the heading */
+    display: center;
+}
+
+h1{
+    font-family: "Playfair Display", serif;
+    font-size: 45px; /* Adjust heading size */
+    margin-bottom: 25px; /* Space below the heading */
+    display: center;
+}
+
+p {
+    position: relative;
+    font-size: 25px; /* Adjust paragraph size */
+    line-height: 1.5; /* Improve readability */
+}
+
+.content-news{
+    display: flex;
+    background-color: #003300;
+    padding: 20px;
+    height: 300vh;
+    margin: 0; /* Center the content */
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Distribute space between items */
+    gap: 15px; /* Space between boxes */
+}
+
+.news-box {
+    width: 100%; /* Ensure news boxes take full width */
+    height: 100%; /* Ensure news boxes take full height */
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    justify-content: space-between; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    border: 1px solid #ccc; /* Box border */
+    width: 100%;
+    border-radius: 8px; /* Rounded corners */
+    margin: 15px 0; /* Spacing between boxes */
+    transition: transform 0.2s; /* Animation on hover */
+    box-sizing: border-box; /* Include padding/border in the element's total width */
+    padding: 10px; /* Adjust this value to reduce space inside the box */
+}
+
+.pr-box {
+    width: 100%; /* Ensure news boxes take full width */
+    height: 100%; /* Ensure news boxes take full height */
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    justify-content: space-between; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    border: 1px solid #ccc; /* Box border */
+    width: 100%;
+    border-radius: 8px; /* Rounded corners */
+    margin: 15px 0; /* Spacing between boxes */
+    transition: transform 0.2s; /* Animation on hover */
+    box-sizing: border-box; /* Include padding/border in the element's total width */
+    padding: 10px; /* Adjust this value to reduce space inside the box */
+
+    position: relative;
+    overflow: hidden; /* Hide overflow to keep the layout clean */
+    height: auto; /* Set default height */
+    transition: max-height 0.3s ease; /* Smooth height transition */
+}
+
+.pdf-box{
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    justify-content: space-between; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    border: 1px solid #ccc; /* Box border */
+    width: 90vw;
+    border-radius: 8px; /* Rounded corners */
+    margin: 15px 0; /* Spacing between boxes */
+    transition: transform 0.2s; /* Animation on hover */
+    box-sizing: border-box; /* Include padding/border in the element's total width */
+    padding: 10px; /* Adjust this value to reduce space inside the box */
+    align-self: center;
+    position: relative;
+    overflow: hidden; /* Hide overflow to keep the layout clean */
+    height: auto; /* Set default height */
+    transition: max-height 0.3s ease; /* Smooth height transition */
+    margin: 15px auto; 
+}
+
+.pdf-box:hover {
+    transform: scale(1.05); 
+}
+
+.image-container {
+    position: relative; /* Positioning context for the link */
+    height: 100%; /* Ensure it fills the pr-box */
+    transition: transform 0.5s ease; /* Smooth image transition */
+}
+
+.pr-box:hover {
+    height: 200%; /* Increase height on hover */
+    transition: transform 0.3s ease;;
+}
+
+.link-container {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Keep it positioned over the image */
+    bottom: 10px; /* Position at the bottom */
+    left: 50%;
+    width:100%;
+    transform: translateX(-50%); /* Center the container */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for container */
+}
+
+.image-container:hover .link-container {
+    opacity: 1; /* Show links on hover */
+}
+
+.link {
+    margin: 5px 0; /* Add margin between links */
+    text-decoration: none; /* Style as needed */
+    color: white; /* Change text color */
+}
+
+.pr-box:hover .link {
+    opacity: 1; /* Fade in the link on hover */
+}
+
+.news-box:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.news-box a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the link a block element */
+}
+
+.news-box img {
+    width: 100%; /* Make the image responsive */
+    height: 250px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Crop the image to fill the area */
+}
+
+.news-box p {
+    padding: 5px; /* Spacing inside the box */
+    margin: 0; /* Reset margin to remove additional space */
+}
+
+
+.content-pages img{
+    max-width: 100%; /* Make images responsive */
+    width: auto;
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+footer{
+    background-color: #003300;
+}
+
+.company {
+    display: ;
+    position: relative;
+    max-width: 100%; /* Adjust as needed */
+    margin:auto;
+    overflow: hidden;
+    background-color: #003300;
+    color: white;
+    text-align: center;
+    height:auto;
+    align-items: center;
+    align-content: center;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%; /* Adjust as needed */
+    margin:auto;
+    overflow: hidden;
+    background-color: #003300;
+    color: white;
+    text-align: center;
+    height:auto;
+}
+
+.carousel-items {
+    width: 100%; /* Show one item at a time */
+    box-sizing: border-box;
+    text-align: center;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center content vertically */
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 25%; /* Show 4 items */
+    box-sizing: border-box;
+    max-width: 25%;
+    max-height: 100%;
+    object-fit: cover; /* Maintain aspect ratio while covering the box */
+    border-radius: 8px;
+    
+    display: flex;
+    flex: 0 0 25%; /* Ensure 4 items are shown */
+    max-width: 25%; /* Prevent exceeding width */
+    box-sizing: border-box;
+    padding: 10px; /* Add padding for spacing */
+}
+
+.carousel-item img {
+    width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.hover-container {
+    position: relative; /* Make the container relative for absolute positioning */
+    display: inline-block; /* Allow the container to wrap the content */
+}
+
+.hover-content {
+    display: none; /* Initially hide the content */
+    position: absolute; /* Position it relative to the container */
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
+    padding: 10px; /* Some padding */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 10; /* Ensure it appears above other content */
+}
+
+.hover-container:hover .hover-content {
+    display: block; /* Show the content on hover */
+}
+

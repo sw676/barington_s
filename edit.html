@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles1.css">
+    <title>Link and Profile Manager</title>
+    <link rel="shortcut icon" href="B icon.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="container">
+        <h1>About Us</h1>
+        <form id="aboutForm">
+            <textarea id="aboutInput" placeholder="about" required></textarea>
+            <button type="submit">Save Profile</button>
+        </form>
+        <h2>Current About Us:</h2>
+        <div id="aboutContainer"></div>
+    </div>
+
+    <div class="container">
+        <h1>Add Links</h1>
+        <form id="linkForm">
+            <input type="text" id="nameInput" placeholder="Link Name" required>
+            <input type="url" id="linkInput" placeholder="Link URL" required>
+            <div id="linkDropArea" class="drop-area">
+                <p>Drag & drop an image here or click to select</p>
+                <input type="file" id="linkImageInput" accept="image/*" hidden>
+            </div>
+            <button type="submit">Add Link</button>
+        </form>
+        <h2>Links:</h2>
+        <div id="linksContainer"></div>
+    </div>
+
+    <div class="container">
+        <h1>Profile Management</h1>
+        <form id="profileForm">
+            <input type="text" id="nameBioInput" placeholder="Name" required>
+            <textarea id="bioInput" placeholder="Bio" required></textarea>
+            <div id="profileDropArea" class="drop-area">
+                <p>Drag & drop your profile picture here or click to select</p>
+                <input type="file" id="profileImageInput" accept="image/*" hidden>
+            </div>
+            <button type="submit">Save Profile</button>
+        </form>
+        <h2>Your Profiles:</h2>
+        <div id="profileContainer"></div>
+    </div>
+    
+    <script src="edit.js"></script>
+</body>
+</html>

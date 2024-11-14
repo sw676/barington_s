@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="B icon.png" type="image/x-icon">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+        <img src="888 Building.jpg" alt="Background Image" class="img-contact">
+        <div class="tint"></div> <!-- This is the tinted overlay -->
+    <div class="content">
+            <header>
+                
+                <a href="index.html">
+                    <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+                </a>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html" class="button">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div id="hamburger" class="hamburger" onclick="toggleNav()">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+                <script>
+                    function toggleNav() {
+                        const nav = document.getElementById('main-nav');
+                        nav.classList.toggle('nav-open');
+                    }
+                    // Close the nav if clicking outside of it
+                    document.addEventListener('click', function(event) {
+                        const nav = document.getElementById('main-nav');
+                        const hamburger = document.getElementById('hamburger');
+
+                        // Check if the click was outside the nav and hamburger
+                        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+                            nav.classList.remove('nav-open'); // Hide the nav
+                        }
+                    });
+                </script>
+            </header>
+        <h1>Contact</h1>
+        <div class="contact-container">
+            <p>Our Office</p>
+        <p><a href="https://maps.app.goo.gl/wL3tQNDckMBuN9Kr9">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;888 Seventh Avenue, New York, New York 10019</a></p>
+        
+        <p>Tel: (212) 974-5710</p>
+        <p>Fax: (212) 586-7684</p>
+        <p>Email: info@barington.com</p>
+        </div>
+        
+    </div>
+
+    <footer>
+        <hr class = "styled-line">
+        <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+        <a href="edit.html" class="button">Investor Login</a>
+        <p>&copy; 2024, All Rights Reserved. Barington Capital Group, L.P.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) { // Adjust the number as needed
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+    
+</body>
+</html>

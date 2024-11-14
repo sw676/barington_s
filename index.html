@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="placeholder.png" type="image/x-icon">
+    <link rel="shortcut icon" href="B icon.png" type="image/x-icon">
+    <title>Barington</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="video-wrapper">
+        <video autoplay muted loop>
+            <source src="NYC footage 1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="overlay"></div>
+    
+
+    <div class="content">
+            <header>
+                <a href="index.html" class="logo">
+                    <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+                </a>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html" class="button">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div id="hamburger" class="hamburger" onclick="toggleNav()">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+                <script>
+                    function toggleNav() {
+                        const nav = document.getElementById('main-nav');
+                        nav.classList.toggle('nav-open');
+                    }
+                    // Close the nav if clicking outside of it
+                    document.addEventListener('click', function(event) {
+                        const nav = document.getElementById('main-nav');
+                        const hamburger = document.getElementById('hamburger');
+
+                        // Check if the click was outside the nav and hamburger
+                        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+                            nav.classList.remove('nav-open'); // Hide the nav
+                        }
+                    });
+                </script>
+            </header>
+            <p>Unlocking Value Through Strategic Activist Investment</p>
+    </div>
+    
+    <!-- New About Us section -->
+    <div class="about-us">
+        <div class="scroll-text" id="scrollText">
+            <a href="about.html"><h2>About Us</h2></a></li>
+        <hr class="styled-line">
+            <p>At Barington Capital Group, L.P., we believe in the power of transformation. 
+                Founded in January 2000 by James A. Mitarotonda, we are value-oriented activist 
+                investors, committed to unlocking the hidden potential within undervalued publicly 
+                traded companies.</p>
+            <p>Our team of experienced professionals employs a disciplined investment approach to identify opportunities for long-term growth.</p>
+            
+            
+        </div>
+        
+    </div>
+
+    <!-- New Our Team section -->
+    <div class="our-team">
+
+        <div class="decorative-box">
+            <div id="scrollTextTeam" class="slide-in-text">
+                <div class="team-intro">
+                    <a href="team.html"><h2>Our Team</h2></a>
+                    <hr class="styled-line">
+                    <a href="team.html"><p>Meet the experienced professionals behind Barington, dedicated to driving value and strategic growth.</p></a>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="JamesMitarotonda.html">
+                        <img src = "Profile Icon.jpg" alt="James A. Mitarotonda">
+                    </a>
+                    <a href="JamesMitarotonda.html">James A. Mitarotonda</a></li>
+                
+                <li>
+                    <a href="ChristopherPappano.html">
+                        <img src = "Profile Icon.jpg" alt="Christopher J. Pappano">
+                    </a>
+                    <a href="ChristopherPappano.html">Christopher J. Pappano</a></li>
+                
+                <li>
+                    <a href="JosephSignorile.html">
+                        <img src = "Profile Icon.jpg" alt="Joseph Signorile CPA, MS">
+                    </a>
+                    <a href="JosephSignorile.html">Joseph Signorile CPA, MS</a></li>
+                
+                <li>
+                    <a href="AugustVlak.html">
+                        <img src = "Profile Icon.jpg" alt="August 'Gus' Vlak">
+                    </a>
+                    <a href="AugustVlak.html">August "Gus" Vlak</a></li>
+            </ul>
+        </div>
+        
+<!--
+        
+        <div class="decorative-box">
+            
+            <div id="scrollTextTeam" class="slide-in-text">
+                Sabrina Wang
+            </div>
+            
+            <div id="scrollText" class="slide-in-text">
+                <div class="team-intro">
+                    <h2><a href="team.html">Our Team</a></li></h2>
+                    <hr class="styled-line">
+                    <p>Meet the experienced professionals behind Barington, dedicated to driving value and strategic growth.</p>
+                </div>
+            </div>
+-->
+            <script>
+                document.addEventListener('scroll', function() {
+    const scrollText = document.getElementById('scrollText');
+    const scrollTextTeam = document.getElementById('scrollTextTeam');
+    const rectText = scrollText.getBoundingClientRect();
+    const rectTeam = scrollTextTeam.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Check if the first element is in the viewport
+    if (rectText.top < windowHeight && rectText.bottom > 0) {
+        scrollText.classList.add('visible');
+    } else {
+        scrollText.classList.remove('visible');
+    }
+
+    // Check if the second element is in the viewport
+    if (rectTeam.top < windowHeight && rectTeam.bottom > 0) {
+        scrollTextTeam.classList.add('visible');
+    } else {
+        scrollTextTeam.classList.remove('visible');
+    }
+});
+
+
+                // Optional: Initialize visible class on load if it's already in the viewport
+                window.addEventListener('load', function() {
+                    const scrollText = document.getElementById('scrollText');
+                    const rect = scrollText.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+
+                    if (rect.top < windowHeight && rect.bottom > 0) {
+                        scrollText.classList.add('visible');
+                    }
+                });
+            </script>
+            
+            <!--<h2>Our Team</h2>-->
+            
+        </div> 
+    </div>
+
+    <!-- New News section -->
+    <div class="news">
+        <a href="news.html"><h2>News</h2></a>
+        <!--<h2><a href="news.html">News</a></h2>-->
+        <hr class="styled-line">
+        <a href="news.html"><p>Stay updated with our latest announcements and insights into the market.</p></a>
+    </div>
+
+    <!-- New Contact section -->
+    <div class="contact">
+        <a href="contact.html"><h2>Contact Us</h2></a>
+        <hr class="styled-line">
+        <a href="contact.html"><p>Get in touch with us to learn more about our investment strategies.</p></a>
+    </div>
+
+    <footer>
+        <hr class = "styled-line">
+        <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+
+        <a href="edit.html" class="button">Investor Login</a>
+        <p>&copy; 2024, All Rights Reserved. Barington Capital Group, L.P.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+</body>
+
+<script>
+    document.addEventListener('scroll', function() {
+        const scrollText = document.getElementById('scrollText');
+        const rect = scrollText.getBoundingClientRect();
+
+        // Check if the bottom of the text is above the viewport
+        if (rect.bottom < window.innerHeight) {
+            scrollText.classList.add('visible'); // Add class to make it visible
+        } else {
+            scrollText.classList.remove('visible'); // Remove class when out of view
+        }
+    });
+</script>
+
+</html>

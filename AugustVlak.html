@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="shortcut icon" href="B icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="team.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content-pages">
+            <header>
+                <a href="index.html">
+                    <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+                </a>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html" class="button">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div id="hamburger" class="hamburger" onclick="toggleNav()">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+                <script>
+                    function toggleNav() {
+                        const nav = document.getElementById('main-nav');
+                        nav.classList.toggle('nav-open');
+                    }
+                    // Close the nav if clicking outside of it
+                    document.addEventListener('click', function(event) {
+                        const nav = document.getElementById('main-nav');
+                        const hamburger = document.getElementById('hamburger');
+
+                        // Check if the click was outside the nav and hamburger
+                        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+                            nav.classList.remove('nav-open'); // Hide the nav
+                        }
+                    });
+                </script>
+            </header>
+        <h1>August "Gus" Vlak</h1>
+        <div class="profile-page-container">
+            <img class="profile-page-image" src="Profile Icon.jpg" alt="James A. Mitarotonda">
+            <div class="bio">
+                <p>
+                    Gus Vlak is a Partner and a Managing Director at Barington. 
+                    Mr. Vlak rejoined Barington in 2023. From 2016 through 2023, 
+                    Mr. Vlak was President & CEO and a Director of The Eastern Company, 
+                    following a successful proxy contest led by Barington. Before joining 
+                    Eastern, Mr. Vlak was a Senior Advisor to Barington. From 2001 to 2012, 
+                    Mr. Vlak was a Partner at Katzenbach Partners, a management consulting 
+                    firm that was acquired by Booz & Co. (now PWC). Prior to Katzenback, 
+                    Mr. Vlak was an investment banker at Lehman Brothers from 1996 to 1998.
+                    Mr. Vlak started his career as a management consultant at McKinsey & Company.   
+                </p>
+                <p>
+                    Mr. Vlak received an A.B. in Economics from Amherst College, 
+                    where he was elected Phi Beta Kappa, and an M.B.A. from the 
+                    Graduate School of Business at Stanford University.
+                </p>
+            </div>
+            
+        </div>
+        <footer>
+            <hr class = "styled-line">
+            <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+            <br><br><br><br>
+            <a href="edit.html" class="button">Investor Login</a>
+            <p>&copy; 2024, All Rights Reserved. Barington Capital Group, L.P.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </footer>
+    </div>
+</body>
+</html>

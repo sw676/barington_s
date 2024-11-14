@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="shortcut icon" href="B icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles News.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <a href="index.html" class="logo">
+                <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+            </a>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html" class="button">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div id="hamburger" class="hamburger" onclick="toggleNav()">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <script>
+                function toggleNav() {
+                    const nav = document.getElementById('main-nav');
+                    nav.classList.toggle('nav-open');
+                }
+                // Close the nav if clicking outside of it
+                document.addEventListener('click', function(event) {
+                    const nav = document.getElementById('main-nav');
+                    const hamburger = document.getElementById('hamburger');
+
+                    // Check if the click was outside the nav and hamburger
+                    if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+                        nav.classList.remove('nav-open'); // Hide the nav
+                    }
+                });
+            </script>
+        </header>
+    </div>
+
+    <div class="carousel">
+        <h1>News</h1>
+        <div class="carousel-items" id="newsCarouselItems">
+            <div class="carousel-item">
+                <div class="news-box">
+                    <a href="https://www.reuters.com/markets/deals/hedge-fund-barington-urges-paramount-scrap-talks-with-skydance-2024-04-12/">
+                        <img src="Hedge fund Barington urges Paramount to scrap talks with Skydance.avif" alt="News Image 1">
+                        <date>August 12, 2024</date><br><br>
+                        <p>Hedge fund Barington urges Paramount to scrap talks with Skydance</p>
+                        <p>(Reuters)</p>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="news-box">
+                    <a href="https://www.wsj.com/business/retail/mattel-draws-activist-seeking-big-changes-at-toy-maker-98bfc386">
+                        <img src="Mattel.avif" alt="News Image 1">
+                        <date>February 2, 2024</date><br><br>
+                        <p>Barbie Owner Mattel Draws Activist Seeking Changes at Toy Maker</p>
+                        <p>(The WSJ)</p>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="news-box">
+                    <a href="https://www.just-style.com/news/hanesbrands-names-three-directors-on-investor-calls-for-action-on-debt/">
+                        <img src="HanesBrand.webp" alt="News Image 1">
+                        <date>November 24, 2023</date><br><br>
+                        <p>HanesBrands names three directors on investor calls for action on debt</p>
+                        <p>(Just Style)</p>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="news-box">
+                    <a href="https://www.valuewalk.com/from-third-point-to-impactive-8-activist-campaigns-that-may-turn-into-full-fledged-proxy-fights/">
+                        <img src="ProxyFight.webp" alt="News Image 1">
+                        <date>January 6, 2023</date><br><br>
+                        <p>8 Activist Campaigns That May Turn Into Full-Fledged Proxy Fights</p>
+                        <p>(ValueWalk)</p>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="news-box">
+                    <a href="https://www.bloomberg.com/news/articles/2022-12-13/activist-barington-wants-board-changes-at-casket-maker-matthews?leadSource=uverify%20wall">
+                        <img src="MatthewsInt..jpg" alt="News Image 1">
+                        <date>December 13, 2022</date><br><br>
+                        <p>Activist Investor Pushes for Board Changes at Casket Maker Matthews</p>
+                        <p>(Bloomberg)</p>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="news-box">
+                    <a href="https://www.conference-board.org/pdfdownload.cfm?masterProductID=20869">
+                        <img src="diverse board.jpg" alt="News Image 1">
+                        <date>June 2020</date><br><br>
+                        <p>Maximizing ​the Benefits of Board Diversity<br><br></p>
+                        <p>(The Conference Board)</p>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="news-box">
+                    <a href="https://hbr.org/2020/06/how-diverse-is-your-board-really">
+                        <img src="board diversity.jfif" alt="News Image 1">
+                        <date>June 11, 2020</date><br><br>
+                        <p>How Diverse is Your Board, Really?<br><br></p>
+                        <p>(Harvard Business Review)</p>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="news-box">
+                    <a href="https://www.wsj.com/articles/l-brands-faces-pressure-to-separate-victorias-secret-bath-body-works-11551761941">
+                        <img src="l-brands.webp" alt="News Image 1">
+                        <date>March 5, 2019</date><br><br>
+                        <p>L Brands Faces Pressure to Separate Victoria's Secret, Bath & Body Works</p>
+                        <p>(WSJ)</p>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="news-box">
+                    <a href="https://corpgov.law.harvard.edu/wp-content/uploads/2019/02/AIAnnual_Review2019.pdf">
+                        <img src="annual-review.jpg" alt="News Image 1">
+                        <date>2019</date><br><br>
+                        <p>The Activist Investing Annual Review 2019<br><br></p>
+                        <p>(Activist Insight)</p>
+                    </a>
+                </div>
+    
+            </div>
+        </div>
+        <button class="prev" onclick="changeSlide(-1, 'newsCarouselItems')">&#10094;</button>
+    <button class="next" onclick="changeSlide(1, 'newsCarouselItems')">&#10095;</button>
+    </div>
+
+    <div class="carousel">
+        <h1>Press Release</h1>
+        <div class="carousel-items" id="pressReleaseCarouselItems">
+            <div class="carousel-item">
+                <div class="pr-box">
+                    <div class="image-container">
+                        <img src="Chicos.jfif" alt="Chicos">
+                        <div class="link-container">
+                            <a href="https://chicosfas.com/investors/press-releases/press-release-details/2021/Chicos-FAS-Inc.-Affirms-Commitment-to-Taking-All-Appropriate-Steps-to-Drive-Shareholder-Value/default.aspx" class="link">June 7, 2021</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="pr-box">
+                    <div class="image-container">
+                        <img src="EasternCompany_logo.png" alt="Eastern">
+                        <div class="link-container">
+                            <a href="https://finance.yahoo.com/news/mark-hernandez-succeed-august-vlak-142000978.html" class="link">January 10, 2023</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="pr-box">
+                    <div class="image-container">
+                        <img src="HanesBrandLOGO.png">
+                        <div class="link-container">
+                            <a href="https://www.businesswire.com/news/home/20230919172168/en/Barington-Capital-Comments-on-Hanesbrands%E2%80%99-Review-of-Strategic-Options-for-Global-Champion-Business" class="link">September 19, 2023</a>
+                            <a href="Hanesbrands.html" class="link">August 8, 2023</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="pr-box">
+                    <div class="image-container">
+                        <img src="LBrands.png">
+                        <div class="link-container">
+                            <a href="https://www.globenewswire.com/news-release/2020/02/20/1987829/0/en/L-Brands-Announces-Transformative-Transaction-With-Sycamore-Partners-to-Drive-Shareholder-Value.html" class="link">February 20, 2020</a>
+                            <a href="https://www.bloomberg.com/press-releases/2019-04-18/l-brands-announces-slate-of-directors-for-2019-annual-meeting-of-stockholders" class="link">April 18, 2019</a>
+                            <a href="https://www.prnewswire.com/news-releases/barington-capital-group-lp-calls-for-changes-at-l-brands-to-meaningfully-improve-long-term-shareholder-value-300806461.html" class="link">March 5, 2019</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="pr-box">
+                    <div class="image-container">
+                        <img src="Mattel.jpg">
+                        <div class="link-container">
+                            <a href="https://www.prnewswire.com/news-releases/barington-capital-calls-for-steps-to-accelerate-shareholder-value-creation-at-mattel-302051444.html" class="link">February 1, 2024</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="pr-box">
+                    <div class="image-container">
+                        <img src="MatthewsINTLogo.svg">
+                        <div class="link-container">
+                            <a href="https://finance.yahoo.com/news/matthews-international-enters-agreement-barington-213500234.html" class="link">December 30, 2022</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="pr-box">
+                    <div class="image-container">
+                        <img src="Rambus.png">
+                        <div class="link-container">
+                            <a href="https://www.businesswire.com/news/home/20220310005903/en/Rambus-Announces-James-Mitarotonda-to-Become-Board-Advisor" class="link">March 11, 2023</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="pr-box">
+                    <div class="image-container">
+                        <img src="trimas.svg">
+                        <div class="link-container">
+                            <a href="Trimas 7-28.html"  class="link">July 28, 2024</a>
+                            <a href="Trimas 12-12.html"  class="link">December 12, 2023</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="changeSlide(-1, 'pressReleaseCarouselItems')">&#10094;</button>
+    <button class="next" onclick="changeSlide(1, 'pressReleaseCarouselItems')">&#10095;</button>
+</div>
+
+    <script>
+        function changeSlide(direction, carouselId) {
+            const items = document.querySelectorAll(`#${carouselId} .carousel-item`);
+            const itemsPerPage = 4; // Number of items to show per click
+            const totalItems = items.length-1;
+            let currentSlide = parseInt(document.getElementById(carouselId).getAttribute('data-current-slide')) || 0;
+    
+            // Update currentSlide based on direction
+            currentSlide += direction * itemsPerPage; // Move by 4 items
+    
+            // Ensure currentSlide stays within bounds
+            if (currentSlide < 0) currentSlide = 0; // Don't go before the first item
+            if (currentSlide >= totalItems) currentSlide = Math.floor(totalItems / itemsPerPage) * itemsPerPage; // Don't go past the last item
+    
+            // Calculate the offset to slide
+            const offset = -currentSlide * (100 / itemsPerPage); // Adjust the offset calculation
+    
+            // Set the transform property to move the carousel
+            document.getElementById(carouselId).style.transform = `translateX(${offset}%)`;
+            document.getElementById(carouselId).setAttribute('data-current-slide', currentSlide); // Update current slide
+        }
+    </script>
+
+<script>
+    const prBoxes = document.querySelectorAll('.pr-box');
+    
+    prBoxes.forEach(box => {
+        box.addEventListener('mouseenter', () => {
+            const linkItems = box.querySelectorAll('a');
+            const additionalHeight = linkItems.length * 1; // Reduced multiplier to 1
+            const currentHeight = box.scrollHeight;
+            box.style.height = `${currentHeight + additionalHeight + 5}px`; // Reduced fixed height to 5
+        });
+    
+        box.addEventListener('mouseleave', () => {
+            box.style.height = 'auto'; // Reset height
+        });
+    });
+    </script>
+    
+
+    <footer>
+        <hr class = "styled-line">
+        <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+        <br><br><br><br><br>
+        <p>&copy; 2024, All Rights Reserved. Barington Capital Group, L.P.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

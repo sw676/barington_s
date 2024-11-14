@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="shortcut icon" href="B icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="team.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content-pages">
+            <header>
+                <a href="index.html">
+                    <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+                </a>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html" class="button">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div id="hamburger" class="hamburger" onclick="toggleNav()">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+                <script>
+                    function toggleNav() {
+                        const nav = document.getElementById('main-nav');
+                        nav.classList.toggle('nav-open');
+                    }
+                    // Close the nav if clicking outside of it
+                    document.addEventListener('click', function(event) {
+                        const nav = document.getElementById('main-nav');
+                        const hamburger = document.getElementById('hamburger');
+
+                        // Check if the click was outside the nav and hamburger
+                        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+                            nav.classList.remove('nav-open'); // Hide the nav
+                        }
+                    });
+                </script>
+            </header>
+        <h1>James Mitarotonda</h1>
+        <div class="profile-page-container">
+            <img class="profile-page-image" src="Profile Icon.jpg" alt="James A. Mitarotonda">
+            <div class="bio">
+                <p>
+                    James A. Mitarotonda is Chairman, President and Chief Executive Officer of Barington 
+                    Capital Group, L.P., a value-oriented activist investment firm that he founded in 
+                    January 2000. Mr. Mitarotonda is an experienced public company director. He currently 
+                    serves as a director of The Eastern Company. He has also served as a director of A. 
+                    Schulman, Inc., Avon Products, Inc., OMNOVA Solutions, Inc., The Pep Boys - Manny, Moe 
+                    & Jack, The Jones Group,  Griffon Corporation, Gerber Scientific, Inc., Register.com, 
+                    Inc., Sielox, Inc. and Ameron International Corporation, among other companies. 
+                </p> 
+                <p>
+                    Mr. Mitarotonda began his career in operating positions at Bloomingdales and Citibank and subsequently was co-founder, Chairman and CEO of Commonwealth Associates (now Comvest). He received a B.A. in economics from Queens College, and an M.B.A. from New York University’s Stern School of Business.
+                </p>
+            </div>
+            
+        </div>
+        <footer>
+            <hr class = "styled-line">
+            <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+            <br><br><br><br>
+            <a href="edit.html" class="button">Investor Login</a>
+            <p>&copy; 2024, All Rights Reserved. Barington Capital Group, L.P.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </footer>
+    </div>
+</body>
+</html>

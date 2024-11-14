@@ -1,0 +1,607 @@
+/* styles.css */
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-weight:100;
+}
+
+
+.video-background {
+    position: fixed; /* Fix the video to the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Ensure the video is behind other content */
+    pointer-events: none; /* Allows clicks to pass through */
+    bottom: ;
+}
+
+video {
+    position: absolute; /* Position the video */
+    top: 50%;
+    left: 50%;
+    min-width: 100%; /* Minimum width */
+    min-height: 100vh; /* Minimum height */
+    width: auto; /* Width auto for aspect ratio */
+    height: 100vh; /* Height auto for aspect ratio */
+    transform: translate(-50%, -50%); /* Center the video */
+    object-fit: cover; /* Ensures the video covers the entire background */
+}
+
+.overlay {
+    position: absolute; /* Position the overlay */
+   
+    bottom:-1vw;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 30vh; /* Full height */
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 33, 0));;
+    /*background-color: linear-gradient(rgb(0, 0, 0,0.37), rgb(255, 255, 255,0.037));*/
+    /*background-color: rgba(0, 0, 0, 0.37); /* Dark overlay */
+    z-index: 1; /* Ensure overlay is above the background */
+}
+
+.overlay1 {
+    position: absolute; /* Position the overlay */
+    top: 645px;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 28%; /* Full height */
+    background: linear-gradient(rgba(0, 0, 0, 0), black);;
+    /*background-color: linear-gradient(rgb(0, 0, 0,0.37), rgb(255, 255, 255,0.037));*/
+    /*background-color: rgba(0, 0, 0, 0.37); /* Dark overlay */
+    z-index: 1; /* Ensure overlay is above the background */
+}
+
+.content {
+    position: relative;
+    z-index: 3; /* Content appears above the video */
+    color: white; /* Text color for contrast */
+    text-align: center; /* Center the text */
+    padding: 20px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly */
+    height: 90vh; /* Full height to space items */
+}
+
+
+
+.content-about {
+    position: relative;
+    z-index: 8; /* Content appears above the video */
+    color: white; /* Text color for contrast */
+    text-align: center; /* Center the text */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly */
+    height: 100vh; /* Full height to space items */
+    background-color: #003300;
+}
+
+.overlay-image {
+    position: absolute; /* Position over the background */
+    top: 5%; /* Adjust as needed */
+    left: 2%; /* Center horizontally */
+    transform: translate(0%, 0%); /* Center adjustment */
+    width: auto; /* Adjust width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 4; /* Ensure it's above the background */
+    cursor: pointer; /* Changes cursor to indicate it's clickable */
+    margin-top: 20px; 
+
+}
+
+.logo {
+    width: 100%; /* Make it responsive */
+    max-width: 200px; /* Set a max width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10vw; /* Space between logo and nav items */
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav items */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Adjust padding as needed */
+    position: relative;
+    /*
+    flex: 1; /* Allows header to take available space */
+    /*
+    position: absolute; /* Position header absolutely */
+    /*
+    right: 20px; /* Adjust as needed for distance from the right edge */
+    /*
+    top: 5%; /* Adjust as needed for distance from the top */
+
+}
+
+
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;            /* <weight>: Use a value from 400 to 900 */
+  font-weight: lighter;
+  font-style: normal;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly; /* Center the links */
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-family:'Playfair Display', serif;
+    
+}
+
+nav ul li {
+    margin: 0 1.5vw;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 1;
+}
+
+nav ul li a:hover {
+    color: #dbdbdb;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    nav ul {
+        flex-direction: row; /* Stack nav items vertically */
+        width: 100%; /* Full width for nav items */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Space between items */
+    }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 1;
+}
+
+a:hover {
+    color: #dbdbdb;
+}
+
+a:hover {
+    color: #888888;
+}
+
+.button {
+    display: inline-block; /* Make it behave like a button */
+    padding: 10px 20px; /* Padding for the button */
+    /* Font size */
+    color: white; /* Text color */
+    background-color: #005700; /* Button background color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    line-height: .7;
+    transition: background-color 0.3s; /* Smooth background color change */
+
+}
+
+footer .button{
+    margin-top: 100px;
+}
+
+.button:hover {
+    background-color: #004400; /* Darker shade on hover */
+}
+
+.content p {
+    margin: 0%; /* Adjust this value to move the text further down */
+    align-self: center;
+    font-size: 7vw;
+    font-family: "Playfair Display", serif;
+    margin-bottom: calc(40vh - 20vw);
+}
+
+.about-us {
+    position: relative; /* Position relative to allow for spacing */
+    z-index: -1; /* Ensure it's above the video and overlay */
+    color:  whitesmoke; /* Text color for contrast */
+    text-align: center; /* Center the text */
+    padding: 15.0%; /* Add some padding */
+    background-color: rgb(0, 33, 0); /* Optional: background for readability */
+    margin-top: 0px; /* Space between video and about section */
+    font-family:'Playfair Display', serif;
+    /*height: 40vh;*/
+}
+
+.about-us h2 {
+    font-size: 45px; /* Adjust heading size */
+    margin-bottom: 0px; /* Space below the heading */
+}
+
+.about-us p {
+    font-size: 25px; /* Adjust paragraph size */
+    line-height: 1.5; /* Improve readability */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.mts {
+    font-size: 25px; /* Adjust paragraph size */
+    line-height: 1.5; /* Improve readability */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.our-team {
+    position: relative; /* Position relative to allow for spacing */
+    z-index: 3; /* Ensure it's above the video and overlay */
+    color:  white; /* Text color for contrast */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add some padding */
+    background-color: rgb(0, 33, 0); /* Optional: background for readability */
+    font-family:'Playfair Display', serif;
+    height: 100vh;
+    align-items: center;
+}
+
+.our-team p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.our-team ul{
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;*/
+    flex-wrap: wrap; /* Allow items to wrap to new lines */
+    font-family:'Playfair Display', serif;
+    margin-top: -20px;
+}
+.our-team img {
+    max-width: 100%; /* Make images responsive */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px;
+}
+.our-team img:hover {
+    transform: scale(1.1); 
+}
+
+.our-team ul {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: center; /* Center the items in the row */
+    padding: 0;
+}
+
+.our-team ul li {
+    text-align: center;
+    padding: 0;
+    margin: 1vw;
+    color: #003300;
+    text-decoration: none;
+    list-style-type: none;
+    font-weight: 1;
+    font-size: 1.7vw;
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: start; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 20px;
+    flex-basis: calc(25% - 3vw); /* 4 items per row with some margin */
+}
+
+/* Media Query for screens 420px and below */
+@media (min-width: 1000px) {
+    .our-team ul li {
+        width: 0vw;
+    }
+
+    .our-team img{
+        width: 25vw;
+    }
+    
+    .decorative-box{
+        height: calc(57vw); 
+    }
+}
+
+/* Media Query for screens 420px and below */
+@media (max-width: 1000px) {
+    .our-team ul li {
+        flex-basis: calc(40% - 2vw); /* 2 items per row */
+        width: 0vw;
+    }
+
+    .our-team img{
+        width: 25vw;
+    }
+    
+    .decorative-box{
+        height: calc(850px-1vw); 
+    }
+}
+
+
+
+.news {
+    position: relative; /* Position relative to allow for spacing */
+    z-index: 3; /* Ensure it's above the video and overlay */
+    color:  #005700; /* Text color for contrast */
+    text-align: center; /* Center the text */
+    padding: 20vw; /* Add some padding */
+    background-color: rgb(255, 255, 255); /* Optional: background for readability */
+    margin-top: 0px; /* Space between video and about section */
+    font-family:'Playfair Display', serif;
+}
+
+.news a {
+    color: #005700;
+    text-decoration: none;
+    font-weight: 1;
+}
+
+.news a:hover {
+    color: #003300;
+}
+
+.contact {
+    position: relative; /* Position relative to allow for spacing */
+    z-index: 3; /* Ensure it's above the video and overlay */
+    color:  #005700; /* Text color for contrast */
+    text-align: center; /* Center the text */
+    padding: 20vw; /* Add some padding */
+    background-color: rgb(255, 255, 255); /* Optional: background for readability */
+    margin-top: 0px; /* Space between video and about section */
+    font-family:'Playfair Display', serif;
+    padding-bottom: 300px;
+}
+
+.contact a {
+    color: #005700;
+    text-decoration: none;
+    font-weight: 1;
+}
+
+.contact a:hover {
+    color: #003300;
+}
+
+footer {
+    background-color: #003300;
+    text-align: left;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: auto;
+    font-size: 2vw;
+    font-family: "Playfair Display", serif;
+
+}
+
+
+h2 {
+    position: relative;
+    font-size: 45px; /* Adjust heading size */
+    margin-bottom: 0px; /* Space below the heading */
+}
+
+p {
+    position: relative;
+    font-size: 25px; /* Adjust paragraph size */
+    line-height: 1.5; /* Improve readability */
+    
+}
+
+footer p{
+    color: white;
+    font-size: 2vw;
+}
+
+
+.decorative-box {
+    border: 0px solid #4CAF50; /* Border color */
+    background-color: #254821; /* Background color */
+    padding: 0%; /* Space inside the box */
+    margin: 0 0 0 0; /* Margin only on top and bottom */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center text */
+    width: 92vw; /* Set a width for the box */
+    
+    float: left; /* Align the box to the left */
+
+}
+
+.team-intro{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.scroll-text {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth transition */
+    position: relative; /* Ensure it's positioned properly */
+    top: 0; /* Position it as needed */
+}
+.scroll-text.visible {
+    opacity: 1; /* Make it visible */
+}
+.content-pages{
+    padding: 20px;
+    height: auto;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color:#003300;
+    text-align: center;
+}
+
+.content-news{
+    background-color: #003300;
+    padding: 20px;
+    height: 300vh;
+    margin: 0 auto; /* Center the content */
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Distribute space between items */
+    gap: 15px; /* Space between boxes */
+    
+}
+
+.news-box {
+    border: 1px solid #ccc; /* Box border */
+    width: 20%;
+    border-radius: 8px; /* Rounded corners */
+    margin: 15px 0; /* Spacing between boxes */
+    overflow: hidden; /* Ensure image fits in box */
+    transition: transform 0.2s; /* Animation on hover */
+    flex: 0 1 calc(25% - 15px); /* 25% width minus gap */
+    box-sizing: border-box; /* Include padding/border in the element's total width */
+    padding: 10px; /* Adjust this value to reduce space inside the box */
+}
+
+.news-box:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.news-box a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the link a block element */
+}
+
+.news-box img {
+    width: 100%; /* Make the image responsive */
+    height: 250px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Crop the image to fill the area */
+}
+
+@media (max-width: 768px) {
+    .news-box img {
+        height: 150px; /* Reduce height on smaller screens */
+    }
+}
+
+.news-box p {
+    padding: 5px; /* Spacing inside the box */
+    margin: 0; /* Reset margin to remove additional space */
+}
+
+
+.content-pages img{
+    max-width: 100%; /* Make images responsive */
+    /*width: auto;*/
+    height: auto; /* Maintain aspect ratio */
+}
+
+.img-contact {
+
+    max-width: 100%; /* Make images responsive */
+    max-height: 40vh; /* Limit the height */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.slide-in-text {
+    transform: translateX(-100%); /* Start completely off-screen to the left */
+    opacity: 0; /* Initially hidden */
+    transition: transform 2s ease, opacity 0.5s ease; /* Smooth transition */
+}
+
+.slide-in-text.visible {
+    transform: translateX(0); /* Slide into its final position */
+    opacity: 1; /* Make it visible */
+}
+
+
+h1 {
+    margin-top: 0; /* Remove top margin for all h1 elements */
+}
+
+
+
+#hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+
+@media (max-width: 900px) {
+    nav {
+        display: none; /* Hide nav */
+    }
+
+    #hamburger {
+        padding-top: 20px;
+        padding-left: 5vw;
+        display: block; /* Show hamburger */
+    }
+
+    .nav-open {
+        display: block; /* Show nav when toggled */
+    }
+
+    #main-nav ul {
+        display: flex;
+        flex-direction: column; /* Vertical orientation */
+        position: absolute;
+        top: 70px; /* Adjust as needed */
+        background: #0050006e; /* Remove background color */
+        width: 200px; /* Full width */
+        padding: 0;
+        align-items: end;
+        right:0;
+        width: auto;
+    }
+
+    #main-nav li {
+        list-style: none;
+    }
+
+    #main-nav a {
+        color: white; /* Set text color to green */
+        text-decoration: none; /* Remove underline */
+        padding: 10px; /* Add some padding */
+        display: block; /* Make links block elements */
+    }
+
+    #main-nav a:hover {
+        background: rgb(75, 116, 75); /* Optional: add a hover effect */
+    }
+}
+

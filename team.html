@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="team.css">
+    <link rel="stylesheet" href="styleTest.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content-pages">
+            <header>
+                <a href="index.html">
+                    <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+                </a>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html" class="button">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div id="hamburger" class="hamburger" onclick="toggleNav()">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+                <script>
+                    function toggleNav() {
+                        const nav = document.getElementById('main-nav');
+                        nav.classList.toggle('nav-open');
+                    }
+                    // Close the nav if clicking outside of it
+                    document.addEventListener('click', function(event) {
+                        const nav = document.getElementById('main-nav');
+                        const hamburger = document.getElementById('hamburger');
+
+                        // Check if the click was outside the nav and hamburger
+                        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+                            nav.classList.remove('nav-open'); // Hide the nav
+                        }
+                    });
+                </script>
+
+
+            </header>
+        <h1>Our Team</h1>
+        <p>At Barington Capital Group, our strength lies in our people. Our team of seasoned 
+            investment professionals brings a wealth of expertise, innovative thinking, 
+            and a passion for driving meaningful change. Each member is not only a leader 
+            in their field but also a strategic partner committed to the success of the companies 
+            we invest in. Together, we harness our knowledge and insights to craft strategies 
+            that support businesses to reach new heights.</p>
+        <ul class="profile-list">
+            <li class="profile-container">
+                <a href="JamesMitarotonda.html">
+                    <img class="profile-image" src="Profile Icon.jpg" alt="James A. Mitarotonda">
+                </a>
+                <a href="JamesMitarotonda.html" class="profile-name">James A. Mitarotonda</a>
+            </li>
+            <li class="profile-container">
+                <a href="JosephSignorile.html">
+                    <img class="profile-image" src="Profile Icon.jpg" alt="Joseph Signorile CPA, MS">
+                </a>
+                <a href="JosephSignorile.html" class="profile-name">Joseph Signorile CPA, MS</a>
+            </li>
+            <li class="profile-container">
+                <a href="ChristopherPappano.html">
+                    <img class="profile-image" src="Profile Icon.jpg" alt="Christopher J. Pappano">
+                </a>
+                <a href="ChristopherPappano.html" class="profile-name">Christopher J. Pappano</a>
+            </li>
+            <li class="profile-container">
+                <a href="AugustVlak.html">
+                    <img class="profile-image" src="Profile Icon.jpg" alt="August 'Gus' Vlak">
+                </a>
+                <a href="AugustVlak.html" class="profile-name">August 'Gus' Vlak</a>
+            </li>
+
+        </ul>
+        
+    </div>
+    <footer>
+        <hr class = "styled-line">
+        <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+        <a href="edit.html" class="button">Investor Login</a>
+        <p>&copy; 2024, All Rights Reserved. Barington Capital Group, L.P.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

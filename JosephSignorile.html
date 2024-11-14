@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="shortcut icon" href="B icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="team.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content-pages">
+            <header>
+                <a href="index.html">
+                    <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+                </a>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html" class="button">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div id="hamburger" class="hamburger" onclick="toggleNav()">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+                <script>
+                    function toggleNav() {
+                        const nav = document.getElementById('main-nav');
+                        nav.classList.toggle('nav-open');
+                    }
+                    // Close the nav if clicking outside of it
+                    document.addEventListener('click', function(event) {
+                        const nav = document.getElementById('main-nav');
+                        const hamburger = document.getElementById('hamburger');
+
+                        // Check if the click was outside the nav and hamburger
+                        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+                            nav.classList.remove('nav-open'); // Hide the nav
+                        }
+                    });
+                </script>
+            </header>
+        <h1>Joseph Signorile CPA, MS</h1>
+        <div class="profile-page-container">
+            <img class="profile-page-image" src="Profile Icon.jpg" alt="James A. Mitarotonda">
+            <div class="bio">
+                <p>
+                    Joseph Signorile CPA, MS is Barington's Chief Financial and Compliance Officer 
+                    and has over 25 years of hedge fund and asset management experience. 
+                    Previously, Mr. Signorile spent over 13 years as a partner, Chief Operating 
+                    Officer and Chief Financial Officer for Kensico Capital Management in 
+                    Greenwich, CT., a multi-billion dollar long/short hedge fund focused on 
+                    value investing. Prior to Kensico, Mr. Signorile was a Vice President of 
+                    finance and accounting working directly with the Chief Financial Officer 
+                    at both Pequot Capital Management and its spin-off, Andor Capital Management, 
+                    in Connecticut. 
+                </p> 
+                <p>
+                    Mr. Signorile began his career with both GGK and PWC as a Manager focusing on 
+                    hedge funds and asset management firms and holds both a B.A. in accounting from 
+                    Hofstra University and a master's degree in taxation from Pace University. 
+                    He is a registered CPA in New York.
+                </p>
+            </div>
+            
+        </div>
+        <footer>
+            <hr class = "styled-line">
+            <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
+            <br><br><br><br>
+            <a href="edit.html" class="button">Investor Login</a>
+            <p>&copy; 2024, All Rights Reserved. Barington Capital Group, L.P.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </footer>
+    </div>
+</body>
+</html>
